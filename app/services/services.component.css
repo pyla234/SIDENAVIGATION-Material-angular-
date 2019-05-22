@@ -1,0 +1,49 @@
+header{
+	height:50px;
+}
+
+.navigation{
+	height:45px;
+	border:2px solid #5cb85c;
+	border-radius:30px;
+	margin-bottom:20px;
+	
+}
+/* .icon{
+	margin-top:10px;
+} */
+ .button_add{
+	height:30px;
+	border:2px solid #5cb85c;
+	border-radius:30px;
+	margin-top:5px;
+	text-align:center;
+	color:gray;
+} 
+thead{
+	background-color:#144765;
+	color:white;
+	text-align:center !important;
+	
+}
+.one{
+	background-color:#ff0000 !important;
+	width:120px;
+	
+}
+.table{
+	text-align:center !important;
+	margin-bottom:0 !important;
+}
+.section{
+	background-color:#144765;
+	height:20px;
+}
+footer{
+	background-color:#000;
+	height:30px;
+	color:white;
+	text-align:center;
+	padding-top:4px;
+	
+}

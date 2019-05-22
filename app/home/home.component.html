@@ -1,0 +1,291 @@
+<head>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --> 
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+	<style>
+		.colour{
+			color:red;
+		}
+    .space{
+      margin-top: 35px !important;
+    }
+	</style>
+</head>
+
+<!-- <div class="col-md-6 col-md-offset-3">
+<div class="jumbotron">
+    <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 class="text-center">Register Form</h3>
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                        <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                            <div *ngIf="firstName.errors.required" class="colour">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                        <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                            <div *ngIf="lastName.errors.required"  class="colour">Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                            <div *ngIf="email.errors.required"  class="colour">Email is required</div>
+                            <div *ngIf="email.errors.email"  class="colour">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+                        <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                            <div *ngIf="password.errors.required"  class="colour">Password is required</div>
+                            <div *ngIf="password.errors.minlength"  class="colour">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }" required />
+                        <div *ngIf="f.submitted && confirmPassword.invalid" class="invalid-feedback">
+                            <div *ngIf="confirmPassword.errors.required"  class="colour">Confirm Password is required</div>
+                            <div *ngIf="confirmPassword.errors.mustMatch"  class="colour">Passwords must match</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        
+    </div>
+</div>
+</div> -->
+
+<!-- credits -->
+
+<body>
+<div class="bg">
+<div class="col-sm-12  ">
+        <div class="row header">
+           <div class="  col-md-6 col-sm-6 col-xs-6">
+                 <h4>Dashboard</h4>
+           </div>
+           <div class="col-md-6 col-sm-6 col-xs-6 bb ">
+             <span><i class="fa fa-home" ></i> Home</span>
+              <span><i class="fa fa-chevron-right"></i> Dashboard</span>
+           </div>
+        </div>
+   </div>
+
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Random first slide" width="1300" height="350">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Random second slide" width="1300" height="350">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]" alt="Random third slide" width="1300" height="350">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Prasent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+    <div class="col-sm-12 space ">
+        <div class="row">
+            <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+                <div class="row2 ">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <a href="#"  class="circle1 "><i class="fa fa-shopping-cart cart_change1" style="font-size:24px;" ></i></a>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-xs-6 text">
+                        <p>Orders</p>
+                        <p>450</p>
+                        <div class = "progress">
+                            <div class = "progress-bar" role = "progressbar" aria-valuenow = "60" 
+                            aria-valuemin = "0" aria-valuemax = "100" style = "width: 45%;">
+                            <span class = "sr-only">45% Complete</span>
+                            </div>
+                       </div>
+                       <p>45% increase..</p>
+                    </div>
+                </div>
+           </div>
+           <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+                <div class="row3">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <a href="#"  class="circle2 "><i class="fa fa-gift  cart_change2" style="font-size:24px;" ></i></a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text">
+                        <p>Monthly sales</p>
+                        <p>155</p>
+                        <div class = "progress">
+                            <div class = "progress-bar" role = "progressbar" aria-valuenow = "60" 
+                            aria-valuemin = "0" aria-valuemax = "100" style = "width: 40%;">
+                            <span class = "sr-only">40% Complete</span>
+                            </div>
+                       </div>
+                       <p>40% increase..</p>
+                    </div>
+                </div>
+           </div>
+           
+           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+                <div class="row4">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <a href="#"  class="circle3 "><i class="fa fa-users-two cart_change3" style="font-size:24px;" ></i></a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text">
+                        <p>New Users</p>
+                        <p>52</p>
+                        <div class = "progress">
+                            <div class = "progress-bar" role = "progressbar" aria-valuenow = "60" 
+                            aria-valuemin = "0" aria-valuemax = "100" style = "width: 85%;">
+                            <span class = "sr-only">40% Complete</span>
+                            </div>
+                       </div>
+                       <p>85% increase..</p>
+                    </div>
+                </div>
+           </div>
+          <div class=" col-xs-12 col-sm-12 col-md-6 col-lg-3  ">
+                <div class="row5">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                        <a href="#"  class="circle4 "><i class="fa fa-usd cart_change4" style="font-size:24px;"></i></a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text">
+                        <p>Collections</p>
+                        <p>13,921s</p>
+                        <div class = "progress">
+                            <div class = "progress-bar" role = "progressbar" aria-valuenow = "60" 
+                            aria-valuemin = "0" aria-valuemax = "100" style = "width: 50%;">
+                            <span class = "sr-only">40% Complete</span>
+                            </div>
+                       </div>
+                       <p>50% increase..</p>
+                    </div>
+                </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    <!-- <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+    <img src="images/img_snow.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+    <img src="images/img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+    <img src="images/img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 ">
+    <img src="images/img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+     -->
+    </div>
+    </div>
+
+<div class="side">
+    <div class="col-sm-12  ">
+        
+           <div class="  col-sm-12 col-md-7 ">
+                 <img src="assets/images/chart.png" alt="Snow" style="width:100%;margin-bottom:15px;height:300px;">
+           </div>
+           <div class="  col-sm-12 col-md-5 ">
+                <img src="assets/images/chart1.png" alt="Forest" style="width:100%;margin-bottom:15px;height:300px;">
+           </div>
+       
+   </div>
+</div>
+<div class="col-md-3" cdkDrag style=" 
+  height: 220px;">
+  <img src="assets/images/ph.jpg" class="img-responsive" style="margin-top:10px;"/>
+</div>
+<!-- <div class="col-md-3" cdkDrag style="border:2px solid blue; 
+  height: 220px;">
+  Drag me around
+</div>
+<div class="col-md-3" cdkDrag style="border:2px solid blue; 
+  height: 220px;">
+  Drag me around
+</div>
+<div class="col-md-3" cdkDrag style="border:2px solid blue; 
+  height: 220px;">
+  Drag me around
+</div>
+<div class="col-md-3" cdkDrag style="border:2px solid blue; 
+  height: 220px;">
+  Drag me around circle
+</div>  -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+</body>
+
+<!-- https://www.linkedin.com/pulse/angular-6-login-session-authentication-reactive-form-validation-das -->

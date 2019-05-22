@@ -1,0 +1,41 @@
+<head>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+</head>
+<body  >
+	<!-- <div class="img img-responsive" > -->
+<img src="assets/images/bg.png" class="img-responsive"/>
+<!-- <h1 align="center" style="color:white;padding-top: 20px">Welcome to Angular</h1>
+<p  style="color:white;padding-top: 60px;font-size:20px;text-align:center"> We are specialized in designing and creating elegant, clean and beautiful 
+	<br> free website templates using Bootstrap, the most popular HTML, CSS &amp; JS framework</p>
+	 -->
+	<!-- </div>  -->
+	<input placeholder="ID" [(ngModel)]="s1"/>
+<input placeholder="NAME" [(ngModel)]="s2"/>
+<input placeholder="AGE" [(ngModel)]="s3"/>
+<br>
+<input type="button" value="GET DEPTS" (click)="f1()"/>
+<input type="button" value="ADD DEPTS" (click)="f2()"/>
+<input type="button" value="EDIT DEPT" (click)="f5()"/>
+<br>
+<table border="2">
+	<tr>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>AGE</th>
+	</tr>
+	<tr *ngFor="let item of ar">
+		<td>{{item.id}}</td>
+		<td>{{item.name}}</td>
+		<td>{{item.age}}</td>
+		<td>
+			<a href="#" (click)="f3(item.id)">Remove</a>
+			<a href="#" (click)="f4(item.id)">Select</a>
+			
+		</td>
+	</tr>
+</table>
+
+<!-- <mat-video src=""></mat-video> -->
+</body>

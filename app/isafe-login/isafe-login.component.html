@@ -1,0 +1,105 @@
+<head>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+   <style type="text/css">
+  .btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn { margin-bottom:10px; }
+    .login{
+    	margin:0 0 4px !important;
+    }
+    </style>
+</head>
+<body class="img">
+<!-- <img src="assets/images/bg.png" class="img-responsive"/> -->
+<!-- <h1 align="center" style="color:white;padding-top: 20px">Welcome to Angular</h1>
+<p  style="color:white;padding-top: 60px;font-size:20px;text-align:center"> We are specialized in designing and creating elegant, clean and beautiful 
+	<br> free website templates using Bootstrap, the most popular HTML, CSS &amp; JS framework</p>
+	 -->
+<div class="form-title">
+       <h1><img src="assets/images/logo1.png"></h1>
+    </div>
+<!-- Login Form-->
+<div class="login-form text-center">
+      <div class="toggle"><i class="fa fa-lock"></i> </div>
+      <div class="form formLogin">
+     
+    <h2>Login to your account</h2>
+    <form>
+    
+  <!--   <button type="button" class="btn btn-labeled btn-success" style=" width:50%; border-radius: 20px; ">
+                <span class="btn-label" style="background:none;"><i class="fa fa-lock" ></i></span>Success</button>
+                
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="fa fa-lock"></i></span>Cancel</button>
+                
+                <span style="border-radius: 20px;" class="btn btn-info btn-lg"><i class="glyphicon glyphicon-info-sign"></i> Information</span> -->
+             <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-group clearfix" [ngClass]="{ 'has-error': submitted && f.userid.errors }">
+              <label for="userid" class="col-md-3 col-sm-5 col-xs-12">Userid</label>
+              <div class="col-md-9 col-sm-7 col-xs-12">
+                  <input type="text" class="form-control" formControlName="userid" />
+                  <div *ngIf="submitted && f.userid.errors" class="help-block">
+                        <div *ngIf="f.userid.errors.required">Userid is required</div>
+                  </div>
+              </div>
+          </div>
+          <div class="form-group clearfix" [ngClass]="{ 'has-error': submitted && f.password.errors }">
+            <label for="password" class="col-md-3 col-sm-5 col-xs-12">Password</label>
+            <div class="col-md-9 col-sm-7 col-xs-12">
+                <input type="password" class="form-control" formControlName="password"/>
+                <div *ngIf="submitted && f.password.errors" class="help-block">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                </div>
+            </div>
+          </div>
+          <!-- <input type="password" placeholder="Password" /> -->
+          <div class="remember text-left">
+        <div class="checkbox checkbox-primary">
+              <input id="checkbox2" type="checkbox" checked>
+              <label for="checkbox2"> Remember me </label>
+            </div>
+      </div>
+      <!-- <a class="btn icon-btn btn-primary" href="#">
+<span class="glyphicon btn-glyphicon glyphicon-thumbs-up img-circle text-primary"></span>
+Like
+</a>
+
+<a class="btn icon-btn btn-success" href="#">
+<span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>
+Add
+</a> -->
+         <p *ngIf="message" class="text-center error" style="color:red">{{message}}</p>
+          <div class="col-xs-12 form-group text-right">
+            <button class="btn btn-success" type="submit">Login</button>
+          </div>
+          <div class="forgetPassword"><a href="javascript:void(0)">Forgot your password?</a> </div>
+        
+  
+      <div class="form formReset">
+    <h2>Reset your password?</h2>
+    
+          <input type="email" placeholder="Email Address" />
+          <button>Send Verification Email</button>
+        
+  </div>
+    
+    <script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+    </script>
+    </form>
+
+<!-- this.submitted = true;
+
+        // stop here if form is invalid
+        if (this.registerForm.invalid) {
+            return;
+        }
+
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
+         
+    } -->
